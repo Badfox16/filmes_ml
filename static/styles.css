@@ -1,0 +1,28 @@
+body {
+    background-color: #E8E8E8;
+    color: #000000;
+    font-family: Arial, sans-serif;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+.btn-custom {
+    background-color: #e50914;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #d40813;
+}
+
+a {
+    color: #64afff;
+}

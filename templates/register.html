@@ -4,15 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <form method="POST" action="{{ url_for('register') }}">
-        {{ form.hidden_tag() }}
-        <p>{{ form.username.label }} {{ form.username() }}</p>
-        <p>{{ form.email.label }} {{ form.email() }}</p>
-        <p>{{ form.password.label }} {{ form.password() }}</p>
-        <p>{{ form.confirm_password.label }} {{ form.confirm_password() }}</p>
-        <p>{{ form.submit() }}</p>
-    </form>
+    <div class="form-container">
+        <h2 class="text-center">Cadastro</h2>
+        <form method="POST" action="{{ url_for('register') }}">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.username.label }} {{ form.username(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.email.label }} {{ form.email(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.password.label }} {{ form.password(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.confirm_password.label }} {{ form.confirm_password(class="form-control") }}
+            </div>
+            <div class="form-group text-center">
+                {{ form.submit(class="btn btn-custom btn-block") }}
+            </div>
+            <p class="text-center"><a href="{{ url_for('login') }}">Já tem uma conta? Faça login</a></p>
+        </form>
+    </div>
 </body>
 </html>
